@@ -68,8 +68,7 @@ export const getUserMatchData = async (userId: string, infoType: string) => {
   }
 };
 
-export const getAllMatch = async (infoType: string) => {
-  const gameTypeString = getGameQuery(infoType);
+export const getAllMatch = async () => {
   try {
     const { data }: { data: ParentMatchesType } = await axios.get(`/kart/v1.0/matches/all`, {
       headers: headers,
