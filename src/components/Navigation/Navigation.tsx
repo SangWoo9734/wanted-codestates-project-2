@@ -14,8 +14,7 @@ function Navigation() {
   const menus: Menu[] = [
     { name: "홈", url: "/" },
     { name: "랭킹", url: "/rank" },
-    { name: "카트", url: "/body" },
-    { name: "트랙", url: "/track" },
+    { name: "카트/트랙", url: "/bodytrack" },
   ];
 
   return (
@@ -27,7 +26,7 @@ function Navigation() {
               navigate("/");
             }}
           >
-            <img src="https://tmi.nexon.com/img/assets/logo_kart.png" alt="cartLogo" />
+            <img src="https://tmi.nexon.com/img/assets/logo_kart.png" alt="kartLogo" />
             <AiOutlineClose />
             <img src="https://tmi.nexon.com/img/assets/tmi_logo_default_b.svg" alt="tmiLogo" />
           </S.LogoWrapper>
@@ -36,7 +35,7 @@ function Navigation() {
           </S.LinkToNexon>
         </S.TopInnerWrapper>
       </S.TopNavigation>
-      <S.BottomNavigation>
+      <S.BottomNavigation needBackground={window.location.pathname === "/"}>
         <S.BottomInnerWrapper>
           {menus.map((menu: Menu, index: number) => {
             return (

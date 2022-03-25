@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const NavigationWrapper = styled.div`
-  position: fixed;
-  top: 0;
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 999;
 `;
 
 export const TopNavigation = styled.div`
@@ -44,7 +45,9 @@ export const LinkToNexon = styled.div`
   font-size: 1.3rem;
 `;
 
-export const BottomNavigation = styled.div``;
+export const BottomNavigation = styled.div<{ needBackground: boolean }>`
+  background: ${({ needBackground }) => (needBackground ? "none" : "#005fcc")};
+`;
 
 export const BottomInnerWrapper = styled.ul`
   width: 80%;
@@ -60,16 +63,25 @@ export const MenuButton = styled.li`
   line-height: 50px;
   margin: 0 10px;
   font-size: 1.5rem;
-  color: white;
+  color: #ffffff80;
   text-align: center;
+  transition: all 0.2s linear;
 
-  &:after {
+  &::after {
     position: absolute;
     display: block;
     content: " ";
     bottom: 0;
     margin: 0 auto;
-    width: 100%;
+    width: 0%;
     border-bottom: 4px solid #fff;
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    color: #ffffff;
+    ::after {
+      width: 100%;
+    }
   }
 `;
