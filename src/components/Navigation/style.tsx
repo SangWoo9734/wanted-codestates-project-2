@@ -46,7 +46,7 @@ export const LinkToNexon = styled.div`
 `;
 
 export const BottomNavigation = styled.div<{ needBackground: boolean }>`
-  background: ${({ needBackground }) => (needBackground ? "none" : "#07f")};
+  background: ${({ needBackground }) => (needBackground ? "none" : "#005fcc")};
 `;
 
 export const BottomInnerWrapper = styled.ul`
