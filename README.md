@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 프론트엔드 코스 - 넥슨
+[✨결과물 보러가기✨](https://sangwoo9734.github.io/wanted-codestates-project-2/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+## 프로젝트 시작
+### `npm install`
+### `npm build`
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 사용 스택
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p>
+  <img src="https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" />
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+  <img src="https://img.shields.io/badge/react--icons-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/react--router--dom-CA4245?style=for-the-badge&logo=React-Router&logoColor=white" />
+</p>
 
-### `npm test`
+## 요구 사항
+1. [카트라이더 TMI(전적 검색 사이트)]([https://tmi.nexon.com/kart](https://tmi.nexon.com/kart))의 페이지중에서 필수 항목 1개와 선택파일 1개 이상의 페이지 개발(총 2개 이상)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 2개의 페이지 개발
+    - 개인 전적 조회 페이지
+    - 카트 / 트랙 랭킹 페이지
+- 그 외 필수 요구 사항
+    - 두 종류 이상의 그래프
+    - 다섯 종류 이상의 애니메이션
+    - 하나 이상의 모듈 구현
 
-### `npm run build`
+## 페이지별 / 기능 구현
+### *메인 페이지*
+메인 페이지에서는 유저 검색이 가능한 검색 컴포넌트를 가지고 있는 페이지로 구성하여 구현하였습니다.  
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/49917043/160398180-1d99836e-a0c8-464e-93de-858920ce1056.png">  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### *개인 전적 조회*
+개인 전적 조회 페이지에는 유저 정보 컴포넌트, 총 전적, 20경기 전적 현황 그래프, 방명록, 카트 / 트랙 별 전적, 전적 기록 컴포넌트로 구성되어 있으며 다음과 같은 기능을 가지고 있습니다.
+1. 유저 정보 컴포넌트
+  유저의 이름, 레벨과 가장 많이 사용한 캐릭터의 이미지가 상단에 존재하고, 가장 많이 사용한 카트바디 top3도 함께 노출시켜 주었습니다.
+  하단에는 개인 전적과 팀전적을 전환할 수 있는 토글 UI와 나머지 기타 버튼들이 위치할 수 있도록 했습니다.
+  
+3. 총 승률 그래프
+  
+4. 최근 20경기 전적 현황 그래프
+ 기존의 최근 순위를 각각 보여주는 것이 아니라 파이 차트로 전환해 보았습니다. 파이차트를 사용함으로서 더 많은 정보를 다룰 수 있을 것이라고 생각했고, 숫자가 직관적으로 보이는 부분도 장점이 될 수 있을 것이라고 생각했습니다.
+ 
+5. 방명록
+유저 닉네임 input, 한줄 글쓰기 input 두가지가 존재하며 우측 화살표를 누르면 입력한 내용이 저장되도록 구현하였습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. 카트 / 트랙별 종합 전적
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. 전적 기록 리스트
+기존의 UI와 비슷하게 승리, 리타이어, 2~8위 3가지를 색깔로 구분하여 시각적으로 표현해주었습니다. 그래고 기존 글자로 표시되어있는 사용한 카트에 대해서 카트 와 캐릭터의 이미지로 대체하여 어떤 카트인지 한 눈에 알기 쉽도록 구성하였습니다.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### *카트 / 트랙 랭킹*
+1. 트랙 / 카트 랭킹
+    API 요청에 제한이 있어 스피드 개인전 120경기에 대해서 가장 많이 사용된 트랙 순서로 10개의 트랙이 화면에 노출되도록 했습니다.
+    1등 트랙, 2등, 3등 트랙의 UI를 구분하여 시각적인 효과를 주고자 하였습니다.
+    
+    
+### 사용한 애니메이션
+1. 메인화면 이미지 슬라이드 애니메이션
+2. 메인화면 검색바 등장 애니메이션
+3. Navigation Bar Hover 애니메이션
+4. 개인 전적 조회 파이차트 애니메이션
+5. 개인 전적 조회 트랙/카트 탭전환 애니메이션
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 사용한 그래프
+차트의 경우 Recharts 라이브러리를 활용하였습니다.
+차트에 사용된 데이터의 경우 api로 전달받은 데이터를 그대로 사용하기보다 카트별 정보, 트랙별 정보와 같이 데이터를 종합하는 모듈을 제작하여,
+모둘을 거친 데이터를 차트에 넘겨주었습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 아쉬운 점
+#### *개인 랭킹 구현*
+과제 초기 구상을 할 당시에는 카트 / 트랙 페이지보다 개인 랭킹 페이지를 만들어보고 싶었습니다. 하지만 일정에 대한 관리가 미흡했고, 개인 전적 조회 페이즈를 구현하는데 생각보다 많은 시간을 소비하게 되면서 개인 랭킹 페이지보다 카트 / 트랙 페이지를 만드는 방향으로 게획을 수정하게 되었습니다.
+#### *데이터 종합 모듈*
+이번 과제를 진행하면서 필요한 데이터가 모두 주어지지 않았기 때문에 주어진 api로 부터 호출받은 데이터를 임의로 가공하여 필요한 데이터로 바꾸는 과정이 필요했습니다. 모듈의 로직을 짜면서 비슷한 기능을 하는 모듈이나 코드라인이 많았기 때문에 조금 더 가독성 있고 재사용성 있는 모듈을 작성하지 못한 부분이 아쉬움으로 남습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
