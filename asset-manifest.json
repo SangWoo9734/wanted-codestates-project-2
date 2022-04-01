@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/wanted-codestates-project-2/static/css/main.31690426.css",
-    "main.js": "/wanted-codestates-project-2/static/js/main.63d41d76.js",
+    "main.js": "/wanted-codestates-project-2/static/js/main.d0990daa.js",
     "index.html": "/wanted-codestates-project-2/index.html",
     "main.31690426.css.map": "/wanted-codestates-project-2/static/css/main.31690426.css.map",
-    "main.63d41d76.js.map": "/wanted-codestates-project-2/static/js/main.63d41d76.js.map"
+    "main.d0990daa.js.map": "/wanted-codestates-project-2/static/js/main.d0990daa.js.map"
   },
   "entrypoints": [
     "static/css/main.31690426.css",
-    "static/js/main.63d41d76.js"
+    "static/js/main.d0990daa.js"
   ]
 }
